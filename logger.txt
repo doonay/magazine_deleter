@@ -1,0 +1,12 @@
+    def my_logger(message):
+
+        time = datetime.datetime.now().strftime("%d.%m.%Y %H:%M")
+        with open('app.log', 'a', encoding='utf-8') as f:
+            f.write(str(time) + ' ' + message + '\n')
+        print('записано в лог: ' + time + ' ' + message + '\n')
+
+        with open('\\\\uniweb\\ftp_mm\dead_shops\\app.log', 'a', encoding='utf-8') as f:
+            f.write(str(time) + ' ' + message + '\n')
+        print('записано в сетевой лог (\\\\uniweb\\ftp_mm\dead_shops\\app.log): ' + time + ' ' + message + '\n')
+
+        тут еще трай используется для сети
